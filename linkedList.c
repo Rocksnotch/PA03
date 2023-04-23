@@ -82,3 +82,8 @@ void deleteAll() { //used to delete all
    // deref head to affect the real head back in the caller
    head = NULL;
 }
+
+struct localEnv* returnHead() { // returns the head of the linked list
+   struct localEnv* current = head;
+   return current;
+}

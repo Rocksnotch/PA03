@@ -7,9 +7,11 @@
 #ifndef LINKEDLIST_H
 #define LINKEDLIST_H
 
+#define MAX_CHAR 1024
+
 struct localEnv {
-    char envName[1024];
-    char envData[1024];
+    char envName[MAX_CHAR];
+    char envData[MAX_CHAR];
 
     struct localEnv *next;
 };
@@ -23,5 +25,7 @@ void printList(); //prints ALL elements in the list
 struct localEnv* find(char *name); //finds and returns the specific element in list
 
 void deleteAll(); //deletes (and frees up, the most important part) ALL Entries in list!!!
+
+struct localEnv* returnHead();
 
 #endif
